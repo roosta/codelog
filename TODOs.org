@@ -6,6 +6,7 @@
 ** [[https://alistapart.com/article/the-slow-death-of-internet-explorer-and-future-of-progressive-enhancement][The Slow Death of Internet Explorer and the Future of Progressive Enhancement · An A List Apart Article]]
 ** [[http://owltastic.com/][Web design work, writing, speaking and inspiration from Meagan Fisher]]
 ** [[http://swisscolors.net/][Swiss Style Color Picker | International Style Colors Scheme Palette]]
+** [[https://www.imaginarycloud.com/blog/timeless-classic-ui-design/?utm_source=reddit&utm_medium=typo&utm_campaign=timelessui][Is timeless UI design a thing?]]
 * Ideas
 ** Glitch art large font header
 ** Revolving characters on menu item hover
