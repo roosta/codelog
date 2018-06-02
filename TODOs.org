@@ -4,6 +4,8 @@
 ** [[https://dribbble.com/shots/3433754-Split-fold-Design-for-blog][Split fold Design for blog by Divan Raj - Dribbble]]
 ** [[https://www.siteinspire.com/][siteInspire - Web Design Inspiration]]
 ** [[https://alistapart.com/article/the-slow-death-of-internet-explorer-and-future-of-progressive-enhancement][The Slow Death of Internet Explorer and the Future of Progressive Enhancement · An A List Apart Article]]
+** [[http://owltastic.com/][Web design work, writing, speaking and inspiration from Meagan Fisher]]
+** [[http://swisscolors.net/][Swiss Style Color Picker | International Style Colors Scheme Palette]]
 * Ideas
 ** Glitch art large font header
 ** Revolving characters on menu item hover
