@@ -1,0 +1,2 @@
+{:sass-src             ["themes/codelog/css"]
+ :resources            ["themes/codelog/img"]}
