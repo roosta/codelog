@@ -1,0 +1,9 @@
+* [[https://github.com/cryogen-project/cryogen][cryogen-project/cryogen: A simple static site generator written in Clojure]]
+* Inspiration
+** [[https://dribbble.com/shots/1781086-Home-page-with-Panel-Slideshow][Home page with Panel Slideshow by Tom Pickering - Dribbble]]
+** [[https://dribbble.com/shots/3433754-Split-fold-Design-for-blog][Split fold Design for blog by Divan Raj - Dribbble]]
+** [[https://www.siteinspire.com/][siteInspire - Web Design Inspiration]]
+** [[https://alistapart.com/article/the-slow-death-of-internet-explorer-and-future-of-progressive-enhancement][The Slow Death of Internet Explorer and the Future of Progressive Enhancement · An A List Apart Article]]
+* Ideas
+** Glitch art large font header
+** Revolving characters on menu item hover
