@@ -1,6 +1,9 @@
 $background-color: #333;
+$appbar-base-color: #434343;
 $font-family-base: 'Crimson Text', serif;
 $font-family-hl: 'Unica One', cursive;
+$navbar-hover-color: #3d80ba;
+$brand-color: $background-color;
 
 body {
   background-color: $background-color;
@@ -18,45 +21,50 @@ body {
 }
 
 .navbar {
-  border-radius: 0;
-  box-shadow: 0 0 0 0, 0 6px 12px rgba(34,34,34,0.1);
-}
 
-.navbar-default {
-  background-color: #428bca;
+  background-color: $appbar-base-color;
   border: 0;
+
+  .navbar-toggle {
+    .icon-bar {
+      background-color: #fff;
+    }
+
+    &:hover {
+      background-color: $navbar-hover-color;
+    }
+
+  }
+
+  .navbar-brand {
+    color: $brand-color;
+    font-size: 56px;
+    font-family: $font-family-hl;
+  }
+
+  .navbar-brand:hover {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        color: #fff;
+      }
+      a:hover {
+        color: #fff;
+        background-color: #3d80ba;
+      }
+    }
+    .active {
+      a {
+        color: #fff;
+        background-color: #3d80ba;
+      }
+    }
+  }
 }
 
-.navbar-default .navbar-brand {
-  color: #fff;
-  font-family: 'Alegreya';
-}
-
-.navbar-default .navbar-brand:hover {
-  color: #fff;
-}
-
-.navbar-default .navbar-nav li a {
-  color: #fff;
-}
-
-.navbar-default .navbar-nav li a:hover {
-  color: #fff;
-  background-color: #3d80ba;
-}
-
-.navbar-default .navbar-nav .active a {
-  color: #fff;
-  background-color: #3d80ba;
-}
-
-.navbar-default .navbar-toggle:hover{
-  background-color: #3d80ba;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
 
 .dropdown-menu {
   background-color: #428bca;
