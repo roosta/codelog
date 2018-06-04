@@ -76,10 +76,10 @@ body {
 
   .nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     float: right;
-    width: $nav-width;
+    grid-template-columns: repeat(3, 1fr);
     height: 100%;
+    width: $nav-width;
 
     span {
 
