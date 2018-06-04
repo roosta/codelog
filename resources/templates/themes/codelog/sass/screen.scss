@@ -16,7 +16,6 @@ $font-family-base: 'Crimson Text', serif;
 $font-family-hl: 'Unica One', cursive;
 
 $background-color: $black;
-$appbar-base-color: #434343;
 $navbar-hover-color: #3d80ba;
 
 $nav-width: 100% - 100% / 1.618;
@@ -32,19 +31,19 @@ body {
   margin: 0;
 }
 
-.gradient {
-  height: 256px;
+.banner {
   background: linear-gradient(to right, $bright-green 0%, $bright-blue 51%, $bright-pink 100%);
+  height: 256px;
 }
 
 .container {
-  max-width: 1000px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
 }
 
 .navbar {
-  background-color: $appbar-base-color;
+  background-color: $bright-black;
   border: 0;
   height: $navbar-height;
 
@@ -60,24 +59,30 @@ body {
   }
 
   .brand {
+    align-items: center;
     background-color: $brand-background-color;
     display: flex;
     float: left;
-    justify-content: center;
-    align-items: center;
     height: 100%;
+    justify-content: center;
     width: $brand-width;
 
     .brand-text {
-      font-family: $font-family-hl;
       color: $black;
-      text-decoration: none;
+      font-family: $font-family-hl;
       font-size: 56px;
+      text-decoration: none;
 
       &:hover {
         color: #fff
       }
     }
+  }
+
+  .snippet {
+    padding:
+    font-size: 20px;
+
   }
 
   .nav {
@@ -88,10 +93,10 @@ body {
     width: $nav-width;
 
     span {
+      align-items: center;
       display: flex;
       height: 100%;
       justify-content: center;
-      align-items: center;
 
       &:nth-child(1) {
         background-color: $bright-pink;
@@ -119,9 +124,9 @@ body {
 
       a {
         color: $bright-white;
-        text-decoration: none;
-        font-size: 24px;
         font-family: $font-family-hl;
+        font-size: 24px;
+        text-decoration: none;
       }
     }
 
