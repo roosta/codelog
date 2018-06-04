@@ -28,9 +28,9 @@ $subtitle-width: $section-width / 1.618;
 body {
   background-color: $black;
   font-family: $font-family-base;
-  position: relative;
   font-size: 16px;
   margin: 0;
+  position: relative;
 }
 
 .container {
@@ -41,9 +41,9 @@ body {
 
 .navbar {
   background-color: $bright-black;
-  height: $navbar-height;
   display: grid;
   grid-template-columns: $title-width $subtitle-width $nav-width;
+  height: $navbar-height;
 
   .navbar-toggle {
     .icon-bar {
@@ -133,46 +133,23 @@ body {
 
 .banner {
   background: linear-gradient(to right, $bright-green 0%, $bright-blue 51%, $bright-pink 100%);
+  height: $banner-height;
   left: 0;
+  position: absolute;
   right: 0;
   z-index: -1;
-  position: absolute;
-  height: $banner-height;
-}
-
-
-.dropdown-menu {
-  background-color: #428bca;
-}
-
-.dropdown-header {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  padding-left: 10px;
-}
-.dropdown-menu li a {
-  color: #fff;
-}
-
-.navbar-default .navbar-nav .open a:hover,
-.navbar-default .navbar-nav .open a:focus,
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a:focus {
-  background-color: #3d80ba;
-  color: #fff;
 }
 
 #content {
   background-color: $bright-white;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12);
   color: $black;
   font-size: 18px;
   padding: 15px;
-  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12);
 
   img {
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
   }
 }
 
@@ -238,10 +215,6 @@ pre, code, .hljs {
 @media (min-width: 768px) {
   .navbar {
     min-height: 70px;
-  }
-
-  .dropdown-menu>li>a {
-    padding: 3px 20px;
   }
 
   .navbar-nav>li>a {
