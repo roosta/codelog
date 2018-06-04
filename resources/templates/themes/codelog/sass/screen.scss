@@ -6,10 +6,11 @@ $bright-black: #434343;
 $black:        #333;
 $hard-black:   #000;
 $white:        #434343;
-$pink:         darken($bright-pink, 15%);
-$blue:         darken($bright-blue, 15%);
-$green:        darken($bright-green, 15%);
+$pink:         darken($bright-pink, 10%);
+$blue:         darken($bright-blue, 10%);
+$green:        darken($bright-green, 10%);
 
+$navbar-height: 140px;
 
 $font-family-base: 'Crimson Text', serif;
 $font-family-hl: 'Unica One', cursive;
@@ -31,6 +32,11 @@ body {
   margin: 0;
 }
 
+.gradient {
+  height: 256px;
+  background: linear-gradient(to right, $bright-green 0%, $bright-blue 51%, $bright-pink 100%);
+}
+
 .container {
   max-width: 1000px;
   margin-right: auto;
@@ -40,7 +46,7 @@ body {
 .navbar {
   background-color: $appbar-base-color;
   border: 0;
-  height: 128px;
+  height: $navbar-height;
 
   .navbar-toggle {
     .icon-bar {
@@ -82,6 +88,10 @@ body {
     width: $nav-width;
 
     span {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
 
       &:nth-child(1) {
         background-color: $bright-pink;
@@ -108,7 +118,6 @@ body {
       }
 
       a {
-        height: 64px;
         color: $bright-white;
         text-decoration: none;
         font-size: 24px;
