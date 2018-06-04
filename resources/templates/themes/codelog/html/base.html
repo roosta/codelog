@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
-    {% style "css/screen.css" %}
+    {% style "screen.css" %}
   </head>
   <body>
 
@@ -36,14 +36,9 @@
 
     <div class="container">
 
-
-      <div class="row">
-        <div class="col-lg-12">
-          <div id="content">
-            {% block content %}
-            {% endblock %}
-          </div>
-        </div>
+      <div id="content">
+        {% block content %}
+        {% endblock %}
       </div>
       <footer>Copyright &copy; {{today|date:yyyy}} {{author}}
         <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>

@@ -4,6 +4,7 @@ $bright-blue:  #536271;
 $bright-green: #4a6c6f;
 $bright-black: #434343;
 $black:        #333;
+$hard-black:   #000;
 $white:        #434343;
 $pink:         darken($bright-pink, 15%);
 $blue:         darken($bright-blue, 15%);
@@ -17,8 +18,8 @@ $background-color: $black;
 $appbar-base-color: #434343;
 $navbar-hover-color: #3d80ba;
 
-$nav-width: 100vw - 100vw / 1.618;
-$section-width: 100vw - $nav-width;
+$nav-width: 100% - 100% / 1.618;
+$section-width: 100% - $nav-width;
 $brand-width: $section-width - $section-width / 1.618;
 
 $brand-background-color: #777870;
@@ -37,7 +38,6 @@ body {
 }
 
 .navbar {
-
   background-color: $appbar-base-color;
   border: 0;
   height: 128px;
