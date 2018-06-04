@@ -161,10 +161,12 @@ footer {
   text-align: center;
 }
 
-blockquote footer {
-  padding-bottom: 0px;
-  padding-top: 0px;
-  text-align: left;
+blockquote {
+  footer {
+    padding-bottom: 0;
+    padding-top: 0;
+    text-align: left;
+  }
 }
 
 #post-tags {
@@ -177,14 +179,16 @@ blockquote footer {
 
 .post-header {
   margin-bottom: 20px;
-}
-.post-header h2 {
-  font-size: 32px;
+
+  h2 {
+    font-size: 32px;
+  }
 }
 
+
 #post-meta {
+  color: rgba(0,0,0,0.4);
   font-size: 14px;
-  color: rgba(0,0,0,0.4)
 }
 
 #page-header {
@@ -199,15 +203,20 @@ blockquote footer {
 pre {
   overflow-x: auto;
 }
-pre code {
-  display: block;
-  overflow-wrap: normal;
-  border: 1px solid rgba(0,0,0,0.1);
-  font-size: 14px;
-  padding: .5em;
-  white-space: pre;
+pre {
+  code {
+    border: 1px solid rgba(0,0,0,0.1);
+    display: block;
+    font-size: 14px;
+    overflow-wrap: normal;
+    padding: .5em;
+    white-space: pre;
+  }
 }
-pre, code, .hljs {
+
+pre,
+code,
+.hljs {
   background-color: $bright-white;
 }
 
@@ -235,7 +244,7 @@ pre, code, .hljs {
 
 
   #post-meta .right {
-    float:left;
+    float: left;
     text-align: left;
   }
 }
