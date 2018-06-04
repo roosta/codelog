@@ -16,11 +16,13 @@
   <body>
 
     <nav class="navbar">
-      <div class="brand">
-        <a class="brand-text" href="{{index-uri}}">{{title}}</a>
+      <div class="title">
+        <a class="title-type" href="{{index-uri}}">{{title}}</a>
       </div>
-
-      <div class="nav right">
+      <div class="subtitle">
+        A combined effort blog and note repository for Daniel Berg and Mathias Bjerke about programming, tech, and GNU/Linux.
+      </div>
+      <div class="nav">
         <span {% if home %} class="active" {% endif %}><a href="{{index-uri}}">Home</a></span>
         <span {% if archives %} class="active" {% endif %}><a href="{{archives-uri}}">Archives</a></span>
         {% for nav-page in navbar-pages %}
@@ -30,9 +32,6 @@
         {% endfor %}
         <span><a href="{{rss-uri}}">RSS</a></span>
         <span><a href="{{rss-uri}}">More</a></span>
-      </div>
-      <div class="snippet">
-        A combined effort blog and note repository for Daniel Berg and Mathias Bjerke about programming, tech, and GNU/Linux.
       </div>
     </nav>
 

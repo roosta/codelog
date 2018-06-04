@@ -5,7 +5,7 @@ $bright-green: #4a6c6f;
 $bright-black: #434343;
 $black:        #333;
 $hard-black:   #000;
-$white:        #434343;
+$white:        #777870;
 $pink:         darken($bright-pink, 10%);
 $blue:         darken($bright-blue, 10%);
 $green:        darken($bright-green, 10%);
@@ -20,9 +20,8 @@ $navbar-hover-color: #3d80ba;
 
 $nav-width: 100% - 100% / 1.618;
 $section-width: 100% - $nav-width;
-$brand-width: $section-width - $section-width / 1.618;
-
-$brand-background-color: #777870;
+$title-width: $section-width - $section-width / 1.618;
+$subtitle-width: $section-width / 1.618;
 
 body {
   background-color: $black;
@@ -44,12 +43,13 @@ body {
 
 .navbar {
   background-color: $bright-black;
-  border: 0;
   height: $navbar-height;
+  display: grid;
+  grid-template-columns: $title-width $subtitle-width $nav-width;
 
   .navbar-toggle {
     .icon-bar {
-      background-color: $white;
+      background-color: $bright-white;
     }
 
     &:hover {
@@ -58,16 +58,13 @@ body {
 
   }
 
-  .brand {
+  .title {
     align-items: center;
-    background-color: $brand-background-color;
+    background-color: $white;
     display: flex;
-    float: left;
-    height: 100%;
     justify-content: center;
-    width: $brand-width;
 
-    .brand-text {
+    .title-type {
       color: $black;
       font-family: $font-family-hl;
       font-size: 56px;
@@ -79,23 +76,21 @@ body {
     }
   }
 
-  .snippet {
-    padding:
+  .subtitle {
+    color: $bright-white;
+    display: flex;
+    align-items: center;
     font-size: 20px;
-
+    padding: 24px;
   }
 
   .nav {
     display: grid;
-    float: right;
     grid-template-columns: repeat(3, 1fr);
-    height: 100%;
-    width: $nav-width;
 
     span {
       align-items: center;
       display: flex;
-      height: 100%;
       justify-content: center;
 
       &:nth-child(1) {
