@@ -1,33 +1,50 @@
-$background-color: #333;
-$appbar-base-color: #434343;
+$bright-white: #f2f7f2;
+$bright-pink:  #8e5572;
+$bright-blue:  #536271;
+$bright-green: #4a6c6f;
+$bright-black: #434343;
+$black:        #333;
+$white:        #434343;
+$pink:         darken($bright-pink, 15%);
+$blue:         darken($bright-blue, 15%);
+$green:        darken($bright-green, 15%);
+
+
 $font-family-base: 'Crimson Text', serif;
 $font-family-hl: 'Unica One', cursive;
+
+$background-color: $black;
+$appbar-base-color: #434343;
 $navbar-hover-color: #3d80ba;
-$brand-color: $background-color;
+
+$nav-width: 100vw - 100vw / 1.618;
+$section-width: 100vw - $nav-width;
+$brand-width: $section-width - $section-width / 1.618;
+
+$brand-background-color: #777870;
 
 body {
-  background-color: $background-color;
+  background-color: $black;
   font-family: $font-family-base;
   font-size: 16px;
+  margin: 0;
 }
 
 .container {
   max-width: 1000px;
-}
-
-.right {
-  float: right;
-  text-align: right;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .navbar {
 
   background-color: $appbar-base-color;
   border: 0;
+  height: 128px;
 
   .navbar-toggle {
     .icon-bar {
-      background-color: #fff;
+      background-color: $white;
     }
 
     &:hover {
@@ -36,30 +53,77 @@ body {
 
   }
 
-  .navbar-brand {
-    color: $brand-color;
-    font-size: 56px;
-    font-family: $font-family-hl;
-  }
+  .brand {
+    background-color: $brand-background-color;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: $brand-width;
 
-  .navbar-brand:hover {
-    color: #fff;
-  }
+    .brand-text {
+      font-family: $font-family-hl;
+      color: $black;
+      text-decoration: none;
+      font-size: 56px;
 
-  .navbar-nav {
-    li {
-      a {
-        color: #fff;
-      }
-      a:hover {
-        color: #fff;
-        background-color: #3d80ba;
+      &:hover {
+        color: #fff
       }
     }
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    float: right;
+    width: $nav-width;
+    height: 100%;
+
+    span {
+
+      &:nth-child(1) {
+        background-color: $bright-pink;
+      }
+
+      &:nth-child(2) {
+        background-color: $bright-blue;
+      }
+
+      &:nth-child(3) {
+        background-color: $bright-green;
+      }
+
+      &:nth-child(4) {
+        background-color: $pink;
+      }
+
+      &:nth-child(5) {
+        background-color: $blue;
+      }
+
+      &:nth-child(6) {
+        background-color: $green;
+      }
+
+      a {
+        height: 64px;
+        color: $bright-white;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: $font-family-hl;
+
+        &:hover {
+          background-color: #3d80ba;
+          color: #fff;
+        }
+      }
+    }
+
     .active {
       a {
-        color: #fff;
-        background-color: #3d80ba;
+        text-decoration: underline;
       }
     }
   }
@@ -74,7 +138,7 @@ body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  padding-left :10px;
+  padding-left: 10px;
 }
 .dropdown-menu li a {
   color: #fff;
@@ -162,16 +226,15 @@ pre, code, .hljs {
   .navbar {
     min-height: 70px;
   }
+
   .dropdown-menu>li>a {
     padding: 3px 20px;
   }
+
   .navbar-nav>li>a {
     padding: 30px 20px;
   }
-  .navbar-default .navbar-brand {
-    font-size: 36px;
-    padding: 25px 15px;
-  }
+
   #content{
     margin-top: 30px;
     padding: 50px 75px;
@@ -179,15 +242,16 @@ pre, code, .hljs {
 }
 
 @media (max-width: 767px) {
-  body{
+
+  body {
     font-size: 14px;
   }
-  .navbar-default .navbar-brand {
-    font-size: 30px;
-  }
+
+
   #content{
     padding: 15px;
   }
+
   #post-meta .right {
     float:left;
     text-align: left;
