@@ -1,5 +1,6 @@
-{:title "Another Page"
+{:title "More"
  :layout :page
+ :navbar? true
  :page-index 2}
 
 ## Look at this sweet page

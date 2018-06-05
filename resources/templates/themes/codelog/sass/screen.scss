@@ -81,56 +81,79 @@ body {
     font-size: 20px;
     padding: 24px;
   }
-
-  .nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-
-
-    a {
-      align-items: center;
-      color: $bright-white;
-      display: flex;
-      font-family: $font-family-hl;
-      font-size: 24px;
-      justify-content: center;
-      text-decoration: none;
-
-      &:nth-child(1) {
-        background-color: $bright-pink;
-      }
-
-      &:nth-child(2) {
-        background-color: $bright-blue;
-      }
-
-      &:nth-child(3) {
-        background-color: $bright-green;
-      }
-
-      &:nth-child(4) {
-        background-color: $pink;
-      }
-
-      &:nth-child(5) {
-        background-color: $blue;
-      }
-
-      &:nth-child(6) {
-        background-color: $green;
-      }
-    }
-
-
-    .active {
-      a {
-        text-decoration: underline;
-      }
-    }
-  }
 }
 
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+
+
+  a {
+    align-items: center;
+    color: $bright-white;
+    display: flex;
+    font-family: $font-family-hl;
+    font-size: 24px;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+
+    svg {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    rect {
+      fill: none;
+      stroke: #fff;
+      stroke-dasharray: 422, 0;
+      stroke-width: 2;
+      transition-delay: none;
+    }
+
+    &:hover {
+      rect {
+        stroke-dasharray: 15, 310;
+        stroke-dashoffset: 48;
+        transition: stroke-dasharray stroke-dashoffset stroke-width 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+
+    &:nth-child(1) {
+      background-color: $bright-pink;
+    }
+
+    &:nth-child(2) {
+      background-color: $bright-blue;
+    }
+
+    &:nth-child(3) {
+      background-color: $bright-green;
+    }
+
+    &:nth-child(4) {
+      background-color: $pink;
+    }
+
+    &:nth-child(5) {
+      background-color: $blue;
+    }
+
+    &:nth-child(6) {
+      background-color: $green;
+    }
+  }
+
+
+  .active {
+    text-decoration: underline;
+  }
+}
 .banner {
   background: linear-gradient(to right, $bright-green 0%, $bright-blue 51%, $bright-pink 100%);
   height: $banner-height;
