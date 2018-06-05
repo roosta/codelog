@@ -109,16 +109,17 @@ body {
 
     rect {
       fill: none;
-      stroke: #fff;
-      stroke-dasharray: 422, 0;
+      stroke: $bright-white;
+      stroke-dasharray: 0, 300;
+      stroke-dashoffset: 300;
       stroke-width: 2;
       transition-delay: none;
     }
 
     &:hover {
       rect {
-        stroke-dasharray: 15, 310;
-        stroke-dashoffset: 48;
+        stroke-dasharray: 300, 0;
+        stroke-dashoffset: 0;
         transition: stroke-dasharray, stroke-dashoffset, 1.35s cubic-bezier(.19, 1, .22, 1);
       }
     }
@@ -151,9 +152,19 @@ body {
 
 
   .active {
-    text-decoration: underline;
+
+    &::after {
+      content: ' ]';
+      margin-left: 10px;
+    }
+
+    &::before {
+      content: '[ ';
+      margin-right: 10px;
+    }
   }
 }
+
 .banner {
   background: linear-gradient(to right, $bright-green 0%, $bright-blue 51%, $bright-pink 100%);
   height: $banner-height;

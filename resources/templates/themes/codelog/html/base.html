@@ -24,8 +24,14 @@
         A combined effort blog and note repository for Daniel Berg and Mathias Bjerke about programming, tech, and GNU/Linux.
       </div>
       <div class="nav-menu">
-        <a {% if home %} class="active" {% endif %} href="{{index-uri}}">Home</a>
-        <a {% if archives %} class="active" {% endif %} href="{{archives-uri}}">Archives</a>
+        <a {% if home %} class="active" {% endif %} href="{{index-uri}}">
+          <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+          Home
+        </a>
+        <a {% if archives %} class="active" {% endif %} href="{{archives-uri}}">
+          <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+          Archives
+        </a>
         {% for nav-page in navbar-pages %}
         <a {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %} href={{nav-page.uri}}>
           <svg>
@@ -34,7 +40,9 @@
           {{nav-page.title}}
         </a>
         {% endfor %}
-        <a href="{{rss-uri}}">RSS</a>
+        <a href="{{rss-uri}}">RSS
+          <svg><rect x="0" y="0" fill="none" width="100%" height="100%"/></svg>
+        </a>
       </div>
     </nav>
 
