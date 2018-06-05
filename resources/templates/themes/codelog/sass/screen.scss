@@ -86,10 +86,16 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    span {
+
+
+    a {
       align-items: center;
+      color: $bright-white;
       display: flex;
+      font-family: $font-family-hl;
+      font-size: 24px;
       justify-content: center;
+      text-decoration: none;
 
       &:nth-child(1) {
         background-color: $bright-pink;
@@ -114,14 +120,8 @@ body {
       &:nth-child(6) {
         background-color: $green;
       }
-
-      a {
-        color: $bright-white;
-        font-family: $font-family-hl;
-        font-size: 24px;
-        text-decoration: none;
-      }
     }
+
 
     .active {
       a {

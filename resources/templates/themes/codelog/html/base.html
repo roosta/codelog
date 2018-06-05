@@ -24,15 +24,15 @@
         A combined effort blog and note repository for Daniel Berg and Mathias Bjerke about programming, tech, and GNU/Linux.
       </div>
       <div class="nav">
-        <span {% if home %} class="active" {% endif %}><a href="{{index-uri}}">Home</a></span>
-        <span {% if archives %} class="active" {% endif %}><a href="{{archives-uri}}">Archives</a></span>
+        <a {% if home %} class="active" {% endif %} href="{{index-uri}}">Home</a>
+        <a {% if archives %} class="active" {% endif %} href="{{archives-uri}}">Archives</a>
         {% for nav-page in navbar-pages %}
-        <span {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
-          <a href="{{nav-page.uri}}">{{nav-page.title}}</a>
-        </span>
+        <a {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %} href={{nav-page.uri}}>
+          {{nav-page.title}}
+        </a>
         {% endfor %}
-        <span><a href="{{rss-uri}}">RSS</a></span>
-        <span><a href="{{rss-uri}}">More</a></span>
+        <a href="{{rss-uri}}">RSS</a>
+        <a href="{{rss-uri}}">More</a>
       </div>
     </nav>
 
