@@ -119,7 +119,7 @@ body {
       rect {
         stroke-dasharray: 15, 310;
         stroke-dashoffset: 48;
-        transition: stroke-dasharray stroke-dashoffset stroke-width 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+        transition: stroke-dasharray, stroke-dashoffset, 1.35s cubic-bezier(.19, 1, .22, 1);
       }
     }
 
